@@ -22,17 +22,14 @@ public class UIGrid : MonoBehaviour
 
     private Coroutine animCoroutine;
 
-    private void Start()
-    {
-        mySize = gridRoot.rect.size;
-        allCells = new List<UIGridCell>();
-        allCellsBg = new List<Image>();
-    }
-
     public void FromData(GridCellData[][] grid)
     {
         if (!initialized)
         {
+            mySize = gridRoot.rect.size;
+            allCells = new List<UIGridCell>();
+            allCellsBg = new List<Image>();
+
             initialized = true;
             int wantedPerRow = Mathf.FloorToInt((mySize.x - gemsGridLayout.padding.left - gemsGridLayout.padding.right
                 - gemsGridLayout.spacing.x * (grid.Length - 1)) / grid.Length);
