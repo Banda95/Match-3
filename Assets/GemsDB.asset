@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db288f8b52794ec448c14a8a129aea91, type: 3}
+  m_Name: GemsDB
+  m_EditorClassIdentifier: 
+  allGems:
+  - id: 0
+    sprite: {fileID: 21300000, guid: 3251e1ccbab329049a6397aafb65b5fa, type: 3}
+  - id: 1
+    sprite: {fileID: 21300000, guid: 62d6a5c6bd559774c9200c82a38e09cb, type: 3}
+  - id: 2
+    sprite: {fileID: 21300000, guid: 70898825457de1d4190e6e5a7aa4d3ac, type: 3}
+  - id: 3
+    sprite: {fileID: 21300000, guid: fe412b4544ce6fe49b0d8178899d3a97, type: 3}
+  - id: 4
+    sprite: {fileID: 21300000, guid: 7fda916f14f602749af17eb1ac9190a7, type: 3}
+  - id: 5
+    sprite: {fileID: 21300000, guid: 145066d0ca0065744a47e6347359f059, type: 3}
