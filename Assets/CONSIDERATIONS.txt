@@ -3,4 +3,4 @@
 - I've used iPhone 12 resolution as the default resolution and aspect ratio.
 - Haven't tested all the resolution but should work in both Portrait and Landscape
 - Didn't spend much time in optimization (time & memory & assets optimization) as there were not requests for it.
-- The generation has some fail points that I didn't had time to tackle. If this happens it try to regenerate the grid again. Not the best solution but I was short on time to test everything.
+- If the generation fails for some reasons it tries to regenerate the grid again. Not the best solution but I was short on time to test everything and this ensures the result.

@@ -326,11 +326,11 @@ public class GridSystem : MonoBehaviour
             do
             {
                 int2 swapTarget = trySwap + dirOffsets[tryDir];
-                if (Valid(swapTarget) && IdValid(id, swapTarget)) //Fail point! 
+                if (Valid(swapTarget) && !CreatesMatch3(swapTarget, id))
                 {
                     //swap the cells!
                     int original = grid[swapTarget.x][swapTarget.y].GemId;
-                    if(IdValid(original, trySwap))
+                    if(!CreatesMatch3(trySwap, original))
                     {
                         SetGemToCoords(swapTarget, id);
                         SetGemToCoords(trySwap, original);
@@ -382,6 +382,27 @@ public class GridSystem : MonoBehaviour
             return false;
 
         return true;
+    }
+
+    private bool CreatesMatch3(int2 inCoords, int id)
+    {
+        //Check if a match3 exists in all directions from that point.
+        bool crossMatch = !IdValid(id, inCoords);
+        if (crossMatch)
+            return true;
+
+
+        //Full left:
+        foreach(var kvp in dirOffsets)
+        {
+            int2 far = inCoords + dirOffsets[kvp.Key] * 2;
+            int2 close = inCoords + dirOffsets[kvp.Key];
+
+            if (ValidAndMatches(far, id) && ValidAndMatches(close, id))
+                return true;
+        }
+
+        return false;
     }
 
     private bool ValidAndMatches(int2 coords, int withId)
